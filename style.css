@@ -1,51 +1,114 @@
 body {
-  background: url('https://www.transparenttextures.com/patterns/notebook.png');
-  background-color: #f9f9f9;
-  font-family: 'Comic Sans MS', cursive;
-  color: #333;
-  text-align: center;
+  margin: 0;
   padding: 2rem;
+  background-image: url("../assets/images/couple.svg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  color: rgb(7, 7, 7);
+  text-align: center;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2)
 }
 
 .centered-content {
-  max-width: 600px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 400px;
   margin: auto;
-  background: white;
+  background: rgba(77, 100, 175, 0);
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
+}
+
+.h1 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  font-family: 'Great Vibes', cursive;
+  text-transform: none;
+  color: #000000;
+  margin: 0;
+}
+
+.media-container {
+  width: 168px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+img.media,
+video.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
 }
 
 button {
   padding: 1rem 2rem;
-  font-size: 1.2rem;
-  background: red;
-  color: white;
+  font-size: 1rem;
+  background: #f44336;
   border: none;
   border-radius: 8px;
+  color: white;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: background 0.3s;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s ease;
+  margin-top: 2rem;
 }
 
 button:hover {
-  background: #555;
+  background: #d32f2f;
 }
 
-img.media, video.media {
-  margin-top: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  max-width: 100%;
-  max-height: 300px;
-  object-fit: contain;
-  display: flex;
-  justify-content: center;
+/* Responsividade */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  .centered-content {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .media-container {
+    width: 140px;
+    height: 250px;
+  }
 }

@@ -3,25 +3,29 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lembranças com Amor 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Valentines</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <div class="container">
-        <h1 id="memoryText">Clique para começar nossa história 💌</h1>
+        <div class="centered-content">
+            <h1 id="memoryText">✨ Feliz Dia dos Namorados! Clique no botão para começar nossa jornada 💑</h1>
 
-        <img id="memoryImage" class="media" style="display: none;" />
-        <video id="memoryVideo" class="media" controls style="display: none;"></video>
+            <div class="media-container" style="display: none;">
+                <img id="memoryImage" class="media" style="display: none;" />
+                <video id="memoryVideo" class="media" controls style="display: none;"></video>
+            </div>
 
-        <button id="nextMemoryBtn">Próxima lembrança</button>
+            <button id="nextMemoryBtn">Next </button>
+        </div>
 
-        <audio id="musicAudio" src="assets/sounds/sua-musica.mp3" loop></audio>
+        <audio id="musicAudio" src="assets/sounds/boom.mp3" loop></audio>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
